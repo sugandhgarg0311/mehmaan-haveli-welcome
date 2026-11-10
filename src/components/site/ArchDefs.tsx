@@ -22,8 +22,8 @@ function archPath() {
 
   let d = `M0 ${H} L0 ${SPRING}`;
   for (let i = 1; i < all.length; i++) {
-    const [x0, y0] = all[i - 1];
-    const [x1, y1] = all[i];
+    const [x0, y0] = all[i - 1]!;
+    const [x1, y1] = all[i]!;
     const chord = Math.hypot(x1 - x0, y1 - y0);
     const r = (chord * 0.58).toFixed(2);
     d += ` A${r} ${r} 0 0 1 ${x1.toFixed(2)} ${y1.toFixed(2)}`;
