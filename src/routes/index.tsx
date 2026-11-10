@@ -130,12 +130,12 @@ function Index() {
 
       {/* HERO */}
       <section data-hero className="relative overflow-hidden bg-maroon-glow text-parchment-light">
-        <MandalaCorner className="absolute left-0 top-0 h-40 w-40 sm:h-56 sm:w-56" />
-        <MandalaCorner className="absolute right-0 top-0 h-40 w-40 -scale-x-100 sm:h-56 sm:w-56" />
-        <MandalaCorner className="absolute bottom-0 left-0 h-40 w-40 -scale-y-100 sm:h-56 sm:w-56" />
-        <MandalaCorner className="absolute bottom-0 right-0 h-40 w-40 -scale-100 sm:h-56 sm:w-56" />
+        <MandalaCorner className="absolute left-0 top-0 h-24 w-24 opacity-70 sm:h-44 sm:w-44 sm:opacity-100 lg:h-52 lg:w-52" />
+        <MandalaCorner className="absolute right-0 top-0 h-24 w-24 -scale-x-100 opacity-70 sm:h-44 sm:w-44 sm:opacity-100 lg:h-52 lg:w-52" />
+        <MandalaCorner className="absolute bottom-0 left-0 h-24 w-24 -scale-y-100 opacity-70 sm:h-44 sm:w-44 sm:opacity-100 lg:h-52 lg:w-52" />
+        <MandalaCorner className="absolute bottom-0 right-0 h-24 w-24 -scale-100 opacity-70 sm:h-44 sm:w-44 sm:opacity-100 lg:h-52 lg:w-52" />
 
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 sm:px-10 md:grid-cols-[1.1fr_0.9fr] md:py-28">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 pt-28 sm:px-10 md:grid-cols-[1.1fr_0.9fr] md:py-28">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={entered ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}

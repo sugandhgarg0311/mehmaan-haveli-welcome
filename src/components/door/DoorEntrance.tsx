@@ -189,7 +189,7 @@ export function DoorEntrance({
 
       {/* Welcome UI */}
       <div ref={uiRef} className="pointer-events-none absolute inset-0 flex flex-col justify-between">
-        <div className="bg-gradient-to-b from-maroon-deep/80 via-maroon-deep/30 to-transparent px-6 pb-16 pt-6 text-center">
+        <div className="bg-gradient-to-b from-maroon-deep/80 via-maroon-deep/30 to-transparent px-6 pb-16 pt-20 text-center sm:pt-6">
           <p className="eyebrow text-gold-bright/90">अतिथि देवो भव · The guest is God</p>
           <p className="mt-2 font-display text-4xl text-parchment-light sm:text-5xl">Mehmaan</p>
         </div>
