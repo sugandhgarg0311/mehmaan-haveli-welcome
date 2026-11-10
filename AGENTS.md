@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- Door entrance (`src/components/door/DoorEntrance.tsx`) swings two crops of one photo in CSS 3D with a GSAP timeline; leaf pixel geometry is hard-coded to that image, so re-measure `DOOR` if the photo changes.
+- Smooth scroll is one Lenis instance driven by the GSAP ticker (`SmoothScroll` + `src/lib/smooth-scroll.ts`); use `lockScroll` instead of touching overflow directly.
+- The scalloped arch is a single global SVG clipPath (`ArchDefs`, id `mehmaan-arch`) mounted in `__root`; reuse `archClip` rather than new clip ids.
+- Sample experiences live in `src/data/experiences.ts` until a backend exists; every one is flagged `rolePlay`.
