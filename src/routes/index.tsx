@@ -126,7 +126,7 @@ function Index() {
 
   return (
     <div ref={pageRef}>
-      {showDoor && <DoorEntrance onEntered={handleEntered} />}
+      {showDoor && <DoorEntrance onEntered={handleEntered} onOpening={() => setEntered(true)} />}
 
       {/* HERO */}
       <section data-hero className="relative overflow-hidden bg-maroon-glow text-parchment-light">

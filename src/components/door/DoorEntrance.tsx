@@ -32,7 +32,14 @@ const hole = {
 };
 const frameClip = `polygon(evenodd, 0 0, 100% 0, 100% 100%, 0 100%, 0 0, ${hole.l} ${hole.t}, ${hole.r} ${hole.t}, ${hole.r} ${hole.b}, ${hole.l} ${hole.b}, ${hole.l} ${hole.t})`;
 
-export function DoorEntrance({ onEntered }: { onEntered: () => void }) {
+export function DoorEntrance({
+  onEntered,
+  onOpening,
+}: {
+  onEntered: () => void;
+  /** Fires as the doors start to swing, so the page behind can come alive. */
+  onOpening?: () => void;
+}) {
   const rootRef = useRef<HTMLDivElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
   const leftRef = useRef<HTMLDivElement>(null);
@@ -81,6 +88,7 @@ export function DoorEntrance({ onEntered }: { onEntered: () => void }) {
     }
 
     const tl = gsap.timeline({ onComplete: finish });
+    tl.call(() => onOpening?.(), [], 1.1);
     tl.to(uiRef.current, { opacity: 0, y: 16, duration: 0.45, ease: "power2.out" }, 0)
       // a slow step towards the door while the latch lifts
       .to(stageRef.current, { scale: 1.08, duration: 1.1, ease: "power2.inOut" }, 0)
